@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-
 if __name__ == "__main__":
     """Print the number of and list of arguments."""
     import argparse
 
-    count = len(argparse.argv) - 1
-    if count == 0:
-        print("0 arguments.")
-    elif count == 1:
-        print("1 argument:")
-    else:
-        print("{} arguments:".format(count))
-    for i in range(count):
-        print("{}: {}".format(i + 1, argparse.argv[i + 1]))
+    parser = argparse.ArgumentParser(description='Print the number of and list of arguments.')
+
+    args = parser.parse_args()
+
+    number_of_arguments = len(args)
+    list_of_arguments = args
+
+    print("Number of arguments:", number_of_arguments)
+    print("List of arguments:", list_of_arguments)
+
