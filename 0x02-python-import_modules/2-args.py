@@ -12,7 +12,7 @@ if __name__ == "__main__":
     list_of_arguments = args.arguments
     number_of_arguments = len(list_of_arguments)
     list_of_arguments = args
-
+    ,
     print("Number of arguments:", number_of_arguments)
     print("List of arguments:", list_of_arguments)
 
