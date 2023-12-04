@@ -1,1 +1,1 @@
-structres and data's 
+structres and data for structrues 
