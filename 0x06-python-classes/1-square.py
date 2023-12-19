@@ -8,4 +8,4 @@ class Square:
     def __init__(self, size):
         """initialization process or Stage"""
         
-        self.__size = None
+        self.__size = size
