@@ -13,6 +13,7 @@ class Square:
             TypeError: if size is not integer
             ValueError: if size is less than zero
         """
+
         try:
             if (!int(size)):
                 return
