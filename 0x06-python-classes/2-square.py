@@ -6,8 +6,13 @@ class Square:
     """ instantiation of a class """
 
     def __init__(self, size=0):
-        """ size must be an int """
-
+        """ Initializing this square class
+        Args:
+            size: represnets the size of the square defined
+        Raises:
+            TypeError: if size is not integer
+            ValueError: if size is less than zero
+        """
         try:
             if (!int(size)):
                 return
