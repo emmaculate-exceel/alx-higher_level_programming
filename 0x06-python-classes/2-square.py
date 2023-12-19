@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Declaration of a class """
+"""A module that defines a square """
 
 
 class Square:
-    """ instantiation of a class """
+    """A class that represents a square"""
 
     def __init__(self, size=0):
-        """ Initializing this square class
+        """Initializing this square class
         Args:
             size: represnets the size of the square defined
         Raises:
@@ -14,14 +14,9 @@ class Square:
             ValueError: if size is less than zero
         """
 
-        try:
-            if (!int(size)):
-                return
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
 
-            if (size < 0):
-                return
-        except typeError:
-            print("size must be an integer")
-
-        except valueError:
-            print("size must be >= 0")
+        self.__size = size
