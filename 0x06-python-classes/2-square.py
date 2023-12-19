@@ -7,6 +7,7 @@ class Square:
 
     def __init__ (self, size = 0):
         """ size must be an int """
+
         try:
             if (!int(size)):
                 return
