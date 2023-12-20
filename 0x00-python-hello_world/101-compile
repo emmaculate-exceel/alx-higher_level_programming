@@ -1,2 +1,17 @@
 #!/bin/bash
-python3 -c "import py_compile;py_compile.compile('$PYFILE', '$PYFILE' + 'c')"
+
+# Get the filename from the environment variable PYFILE
+pyfile="$PYFILE"
+
+# Check if the variable is set and it's a valid file
+if [ -n "$pyfile" ] && [ -f "$pyfile" ]; then
+    # Extract the filename without extension
+    filename=$(basename "$pyfile" .py)
+
+    # Compile the Python file
+    python -m py_compile "$pyfile" -o "${filename}.pyc"
+    echo "Compilation successful. Compiled file: ${filename}.pyc"
+else
+    echo "Invalid or missing file specified in the environment variable \$PYFILE"
+fi
+
