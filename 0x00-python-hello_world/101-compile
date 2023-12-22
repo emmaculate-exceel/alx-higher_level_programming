@@ -1,17 +1,26 @@
 #!/bin/bash
 
-# Get the filename from the environment variable PYFILE
-pyfile="$PYFILE"
-
-# Check if the variable is set and it's a valid file
-if [ -n "$pyfile" ] && [ -f "$pyfile" ]; then
-    # Extract the filename without extension
-    filename=$(basename "$pyfile" .py)
-
-    # Compile the Python file
-    python -m py_compile "$pyfile" -o "${filename}.pyc"
-    echo "Compilation successful. Compiled file: ${filename}.pyc"
-else
-    echo "Invalid or missing file specified in the environment variable \$PYFILE"
+# Ensure Python 3 is accessible
+if ! command -v python3 &> /dev/null; then
+  echo "Error: Python 3 is not installed or accessible in your PATH."
+  exit 1
 fi
+
+# Validate the existence of the Python file
+if [[ ! -f "$PYFILE" ]]; then
+  echo "Error: Python file $PYFILE does not exist."
+  exit 1
+fi
+
+# Compile the Python file using py_compile module
+python3 -m py_compile "$PYFILE"
+
+# Check if compilation was successful
+if [[ ! -f "${PYFILE}c" ]]; then
+  echo "Error: Compilation failed. Please check for errors in the Python file."
+  exit 1
+fi
+
+# Output confirmation message
+echo "Python file $PYFILE compiled successfully to $PYFILEc."
 
