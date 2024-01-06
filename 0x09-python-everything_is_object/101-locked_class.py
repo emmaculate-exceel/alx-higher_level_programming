@@ -5,6 +5,6 @@
 class LockedClass:
     """
         instantiation of first_name
-    """ 
+    """
 
     __slots__ = ["first_name"]
