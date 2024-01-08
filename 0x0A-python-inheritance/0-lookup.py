@@ -7,5 +7,4 @@
 
 def lookup(obj):
     """ Returns a list of object """
-
     return(dir(obj))
