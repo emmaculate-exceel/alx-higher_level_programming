@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+""" List of integers """
+
+
+class Mylist(List):
+      """
+	Inherited class of object
+      """
+
+      def print_sorted(self):
+      	  
