@@ -1,4 +1,4 @@
 -- average of the total
 -- in the student DBMS
 
-SELECT AVG(score) FROM second_table;
+SELECT AVG(score) AS average FROM second_table;
