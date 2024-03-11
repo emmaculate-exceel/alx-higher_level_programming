@@ -9,7 +9,7 @@ function myfunc (n) {
   if (n < 0) {
     return 0;
   } else {
-    return (n + myfunc(n - 1));
+    return (n * myfunc(n - 1));
   }
 }
 console.log(myfunc(x));
