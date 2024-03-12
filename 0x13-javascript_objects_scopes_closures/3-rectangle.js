@@ -9,7 +9,7 @@ class Rectangle {
   }
       Print () {
 	  for (let i = 0; i < this.h; i++) {
-	      console.log('X'.repeat(this.h);
+	      console.log('X'.repeat(this.w);
     }
   }
 }
