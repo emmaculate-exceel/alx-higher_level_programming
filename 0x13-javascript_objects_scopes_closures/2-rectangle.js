@@ -2,7 +2,7 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (typeof h > 0 && !isNaN(w) && typeof w > 0 && !isNaN(w)) {
+    if (h > 0 && !isNaN(w) && w > 0 && !isNaN(w)) {
       this.width = w;
       this.height = h;
     }
