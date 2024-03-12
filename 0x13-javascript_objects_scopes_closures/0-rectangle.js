@@ -1,3 +1,9 @@
 #!/usr/bin/node
 
-class Rectangle = {};
+class Rectangle {
+  constructor (shape) {
+    this.shape = shape;
+  }
+}
+
+module.exports = { Rectangle };
