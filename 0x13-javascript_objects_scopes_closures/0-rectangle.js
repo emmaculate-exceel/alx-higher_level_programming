@@ -1,9 +1,5 @@
 #!/usr/bin/node
 
-class Rectangle {
-  constructor (shape) {
-    this.shape = shape;
-  }
-}
+class Rectangle {};
 
 module.exports = Rectangle;
