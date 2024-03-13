@@ -3,7 +3,7 @@
 const dict = require('./101-data.js').dict;
 const new_dict = {};
 
-for (let key in new_dict) {
+for (let key in dict) {
 	new_dict[key] = dict[key];
 }
 
