@@ -1,13 +1,10 @@
 #!/usr/bin/node
 
-const { occurrences } = require('./101-data.js');
+const dict = require('./101-data.js').dict;
+const new_dict = {};
 
-// Compute the dictionary of user ids by occurrence
-const usersByOccurrence = Object.entries(occurrences).reduce((acc, [userId, occurrence]) => {
-    acc[occurrence] = acc[occurrence] || [];
-    acc[occurrence].push(userId);
-    return acc;
-}, {});
+for (let key in new_dict) {
+	new_dict[key] = dict[key];
+}
 
-// Print the new dictionary
-console.log(usersByOccurrence);
+console.log(new_dict);
