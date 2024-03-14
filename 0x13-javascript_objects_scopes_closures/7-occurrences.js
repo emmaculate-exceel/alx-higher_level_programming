@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 exports.nbOccurences = function (list, searchElement) {
-    let couter = 0;
+    let counter = 0;
     for (let element of list) {
 	if (element === searchElement) {
 	    counter++;
@@ -10,3 +10,4 @@ exports.nbOccurences = function (list, searchElement) {
     return counter;
 }
 	    
+module.exports = exports.nbOccurences;
