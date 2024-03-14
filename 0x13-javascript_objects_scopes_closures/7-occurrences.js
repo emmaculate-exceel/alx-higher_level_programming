@@ -10,4 +10,4 @@ exports.nbOccurences = function (list, searchElement) {
     return counter;
 }
 	    
-module.exports = exports.nbOccurences;
+module.exports = nbOccurences;
