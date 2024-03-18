@@ -7,11 +7,11 @@ which name starts with a capital N
 import MySQLdb
 from sys import argv
 
-if __name__ == "__main__":
-    """
-    select all states where N is a capital letter
-    """
+"""
+select all states that start with N
+"""
 
+if __name__ == "__main__":
     db_connect = MySQLdb.connect(host='localhost', port=3306, username=argv[1],
                                  password=argv[2], db=argv[3])
     db_cursor = db_connect.cursor()
