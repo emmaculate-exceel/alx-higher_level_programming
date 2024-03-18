@@ -8,7 +8,7 @@ import MySQLdb
 from sys import argv
 
 """
-select all states that start with N
+from the database we'll  select all states with N
 """
 
 if __name__ == "__main__":
