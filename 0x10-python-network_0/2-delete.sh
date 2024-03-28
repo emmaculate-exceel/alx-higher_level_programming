@@ -1,3 +1,3 @@
 #!/bin/bash
 #script to delete a file using curl
-curl -sX DELETE '$1'
+curl -sX DELETE "$1"
