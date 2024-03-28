@@ -1,3 +1,3 @@
 #!/bin/bash
 #get the methods and in the head request
-curl -siX OPTIONS "$1"
+curl -sH "X-School-User-Id: 98" "x$1"
