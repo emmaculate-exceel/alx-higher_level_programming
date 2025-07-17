@@ -3,6 +3,8 @@
 def print_last_digit(number):
     if number <= 0:
         print(-(number) % 10, end='')
+    elif number :
+        print(number % 10, end='')
     else:
         print((number) % 10, end='')
     return abs(number)
